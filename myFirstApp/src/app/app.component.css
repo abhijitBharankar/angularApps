@@ -1,0 +1,30 @@
+header{
+    text-align: center;
+    background-color: rgb(243, 0, 126);
+    color: white;
+    /* padding: 10px; */
+    /* margin: 5px 0; */
+    grid-area: header;
+}
+footer{
+    text-align: center;
+    background-color: rgb(243, 0, 126);
+    color: white;
+    /* padding: 10px; */
+    /* margin: 5px 0; */
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+}
+
+.main{
+    grid-area: main;
+}
+
+
+

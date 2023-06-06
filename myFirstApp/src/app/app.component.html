@@ -1,2 +1,28 @@
-<h1>This is my first app using Angular</h1>
+<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  
+  <div class="main">
+    <!-- <app-login></app-login>
+    <app-signup></app-signup> -->
+  
+      <!-- <button routerLink = "/login">Go to login page</button>
+      <button routerLink = "/signup">Go to signup page</button> -->
+
+        <button routerLink = "admin/adminlogin">Admin Login</button>
+        <button routerLink = "admin/adminsignup">Admin SignUp</button>
+        <button routerLink = "student/studentlogin">Student Login</button>
+        <button routerLink = "student/studentsignup">Student SignUp</button>
+      <router-outlet></router-outlet>
+
+        <input type="text" [(ngModel)] = "twoWayData">
+        {{twoWayData}}
+  </div>
+  
+  <footer>
+    <p>This website is developed by Abhijit Bharankar</p>
+  </footer>
+</div>
+
 
