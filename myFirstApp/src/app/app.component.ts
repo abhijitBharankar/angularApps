@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myFirstApp';
-  twoWayData = 65000;
+  title = 'MyFirstApp';
+  twoWayData = 56999;
 }
