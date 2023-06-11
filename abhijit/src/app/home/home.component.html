@@ -1,0 +1,70 @@
+<div class="header">
+    <div class="mainHead">
+
+      <a routerLink="home"><h1>{{title}}</h1></a>
+      <h6>Follow me</h6>
+    </div>
+    <div class="subHead">
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/aboutMe">About Me</a></li>
+        <li><a routerLink="/contactMe">Contact Me</a></li>
+        <li><a routerLink="/newsLetter">Newsletter</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf = show class="directive">
+    <h4>Directives in angular</h4>
+
+    <ol>
+      <li>Component Directive</li>
+      <li>Structural Directive</li>
+      <ul>
+        <li>ngIf</li>
+        <li>ngSwitch</li>
+        <li>ngFor</li>
+      </ul>
+      <li>Atribute</li>
+      <ul>
+        <li>ngClass</li>
+        <li>ngStyle</li>
+      </ul>
+    </ol>
+  </div>
+  <button (click)="collapse()">Collapse</button>
+
+  <table class="marksTable">
+    <th *ngFor=" let item of tableHeadings">
+      {{item}}
+    </th>
+  <tbody>
+    <tr *ngFor="let item of result">
+      <td>{{item.Name}}</td>
+      <td>{{item.Marks}}</td>
+      <td>{{item.Age}}</td>    
+    </tr>
+  </tbody>
+  </table>
+
+  <div>
+    <ul>
+      <li *ngFor="let num of combine">{{num}}</li>
+    </ul>
+  </div>
+
+  <!-- ngSwitch number to days -->
+  <div [ngSwitch]="days">
+    <div *ngSwitchCase = "1">Sunday</div>
+    <div *ngSwitchCase = "2">Monday</div>
+    <div *ngSwitchCase = "3">Tuesday</div>
+    <div *ngSwitchCase = "4">Wednesday</div>
+    <div *ngSwitchCase = "5">Thursday</div>
+    <div *ngSwitchCase = "6">Friday</div>
+    <div *ngSwitchCase = "7">Saturday</div>
+    <div *ngSwitchDefault="">Not valid number</div>
+  </div>
+
+  <div [ngClass]="background? 'pink':'blue'">this is div for ngClass</div>
+  <button id="btnChange" (click)="changeBackground()">Pink</button>
