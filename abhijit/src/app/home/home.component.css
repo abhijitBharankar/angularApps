@@ -7,9 +7,17 @@
 .mainHead{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 40px;
 }
 
+.mainHead a{
+    text-decoration: none;
+    color: white;
+}
+.loginBtn button{
+    margin: 5px;
+}
 .subHead{
     display: flex;
     justify-content: center;

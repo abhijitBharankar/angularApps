@@ -1,0 +1,18 @@
+<!-- this form is created using template-driven  -->
+
+<div class="container">
+    <div class="formContainer">
+        
+        <form action="" #loginForm='ngForm'>
+            <h1>Login</h1>
+            <label for="username">Username: </label>
+            <input type="text" ngModel name="username" #username = 'ngModel' required pattern="[a-zA-Z]*$" minlength="4" maxlength="16"><br>
+            <span class="error" *ngIf="username.errors?.['pattern']">Please enter alphabets only</span>
+            <span class="error" *ngIf="username.errors?.['minlength'] && !username.errors?.['pattern']">Length of username must be atleast 4</span><br>
+            <label for="username">Password: </label>
+            <input type="password" ngModel name="password" #password="ngModel" required minlength="6"><br>
+            <span class="error" *ngIf="password.errors?.['minlength']">Password must be atleast 6 characters long</span><br>
+            <button (click)="submit(loginForm.value)" [disabled] = "!loginForm.valid">Login</button>
+        </form>
+    </div>
+</div>

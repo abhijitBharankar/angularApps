@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  title ="Abhijit"
+
+  constructor(private router: Router ){
+
+  }
+  title ="FalconAB"
   show = true
   tableHeadings = ['Name', 'marks', 'Age']
   result = [
@@ -23,6 +28,14 @@ export class HomeComponent {
   background = true
 
   days = 7
+
+  login(){
+    this.router.navigateByUrl('/login')
+  }
+
+  signup(){
+    this.router.navigateByUrl('/signup')
+  }
 
   
   ngInIt(){

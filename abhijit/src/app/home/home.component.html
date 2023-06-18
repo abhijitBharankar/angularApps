@@ -2,7 +2,10 @@
     <div class="mainHead">
 
       <a routerLink="home"><h1>{{title}}</h1></a>
-      <h6>Follow me</h6>
+      <div class="loginBtn">
+        <button (click)="login()">Log in</button>
+        <button (click)="signup()">Sign Up</button>
+      </div>
     </div>
     <div class="subHead">
       <ul>

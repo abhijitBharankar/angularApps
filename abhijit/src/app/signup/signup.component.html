@@ -1,0 +1,48 @@
+<!-- this form is created using reactive form -->
+
+<div class="container">
+    <h1>Registration</h1>
+    <form action="" [formGroup]="signupForm">
+        <div class=" mb-3 row">
+            <label class="col-sm-2 col-form-label" for="firstName">First Name : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="firstName" formControlName="firstName">
+            </div>
+        </div>
+        <span class="error" *ngIf="signupForm.get('firstName')?.errors?.['pattern']">Please enter alphabets only</span><br>
+
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="lastName">Last Name : </label>
+
+            <div class="col-sm-10 ">
+                <input class="form-control" type="text" name="lastName" formControlName="lastName"><br>
+            </div>
+        </div>
+        
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="mobile">Mobile Number: </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" name="mobile" formControlName="mobile"><br>
+            </div>            
+        </div>
+        <span class="error"
+            *ngIf="signupForm.get('mobile')?.errors?.['minlength'] || signupForm.get('mobile')?.errors?.['maxlength']">
+            Mobile number should be 10 digits only</span>
+
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="createPassword">Create Password : </label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="confirmPassword">Confirm Password : </label>
+
+            <div class="col-sm-10">
+                <input class="form-control" type="text"><br>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg" [disabled]="!signupForm.valid" (click)="register()" id="registerBtn">Register</button>
+    </form>
+</div>
