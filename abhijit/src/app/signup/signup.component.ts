@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SignupComponent {
 
   signupForm!: FormGroup;
-
+  matchPassword : boolean =true;
 
   constructor(private formBuilder: FormBuilder) {
 
@@ -21,9 +21,14 @@ export class SignupComponent {
 
   signupFormControl() {
     this.signupForm = this.formBuilder.group({
-      firstName: ['Abhijit', [Validators.required, Validators.pattern('[a-zA-Z]*$')]],
-      lastName: [''],
-      mobile: ['', [Validators.maxLength(10), Validators.minLength(10)]]
+      firstName: ['', [Validators.required, Validators.pattern('[a-zA-Z]*$')]],
+      lastName: ['',[Validators.required, Validators.pattern('[a-zA-Z]*$')]],
+      mobile: ['', [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern('[0-9]*$')]],
+      email:['',[Validators.required, Validators.email]],
+      createPassword: ['',[Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['',[Validators.required, Validators.minLength(6)]],
+      gender:['male',[Validators.required]],
+      name:['', [this.nameValidatin]]
     })
   }
 
@@ -31,5 +36,24 @@ export class SignupComponent {
   register() {
 
     console.log(this.signupForm.value)
+  }
+
+
+  confirmPassword(){
+    console.log(this.signupForm.value.createPassword)
+    console.log(this.signupForm.value.confirmPassword)
+    if(this.signupForm.value.createPassword == this.signupForm.value.confirmPassword){
+      this.matchPassword = true;
+    }else{
+      this.matchPassword = false;
+    }
+  }
+
+
+  nameValidatin(inp:any){
+    console.log(inp.value)
+    let data = inp.value?.toLowerCase();
+    let isErr = data.includes('copy')
+    return isErr ? {Err : true} : null;
   }
 }

@@ -1,10 +1,13 @@
+.mainContainer{
+    padding: 0 100px;
+
+}
 .container{
     /* display: flex; */
     /* justify-content: center; */
     /* flex-direction: column; */
     text-align: center;
     /* background-color: lightgoldenrodyellow; */
-    padding: 0 100px;
 }
 
 .container h1{
