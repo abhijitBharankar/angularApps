@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +13,7 @@ export class SignupComponent {
   signupForm!: FormGroup;
   matchPassword : boolean =true;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private ds : DataService, private router: Router) {
 
   }
 
@@ -36,6 +38,8 @@ export class SignupComponent {
   register() {
 
     console.log(this.signupForm.value)
+    this.ds.name = this.signupForm.value.firstName
+    this.router.navigateByUrl('/home')
   }
 
 

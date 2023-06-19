@@ -3,8 +3,10 @@
 
       <a routerLink="home"><h1>{{title}}</h1></a>
       <div class="loginBtn">
-        <button (click)="login()">Log in</button>
-        <button (click)="signup()">Sign Up</button>
+        <span *ngIf="!name">Welcome, User</span>
+        <span *ngIf="name">Welcome {{name}}</span>
+        <button class="btn btn-primary" (click)="login()">Log in</button>
+        <button class="btn btn-primary" (click)="signup()">Sign Up</button>
       </div>
     </div>
     <div class="subHead">
