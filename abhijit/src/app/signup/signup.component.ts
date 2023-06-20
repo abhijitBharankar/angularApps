@@ -13,22 +13,26 @@ export class SignupComponent {
   signupForm!: FormGroup;
   matchPassword : boolean =true;
 
+
   constructor(private formBuilder: FormBuilder, private ds : DataService, private router: Router) {
 
   }
 
   ngOnInit() {
     this.signupFormControl();
+
+    // this.ds.userData =  
+
   }
 
   signupFormControl() {
     this.signupForm = this.formBuilder.group({
-      firstName: ['', [Validators.required, Validators.pattern('[a-zA-Z]*$')]],
-      lastName: ['',[Validators.required, Validators.pattern('[a-zA-Z]*$')]],
-      mobile: ['', [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern('[0-9]*$')]],
-      email:['',[Validators.required, Validators.email]],
-      createPassword: ['',[Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['',[Validators.required, Validators.minLength(6)]],
+      firstName: ['Abhiit', [Validators.required, Validators.pattern('[a-zA-Z]*$')]],
+      lastName: ['Bharankar',[Validators.required, Validators.pattern('[a-zA-Z]*$')]],
+      mobile: ['9876543210', [Validators.required, Validators.maxLength(10), Validators.minLength(10), Validators.pattern('[0-9]*$')]],
+      email:['abhi@gmail.com',[Validators.required, Validators.email]],
+      createPassword: ['abhijit',[Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['abhijit',[Validators.required, Validators.minLength(6)]],
       gender:['male',[Validators.required]],
       name:['', [this.nameValidatin]]
     })
@@ -38,7 +42,13 @@ export class SignupComponent {
   register() {
 
     console.log(this.signupForm.value)
-    this.ds.name = this.signupForm.value.firstName
+    this.ds.users.firstName = this.signupForm.value.firstName
+    this.ds.users.lastName = this.signupForm.value.lastName
+    this.ds.users.mobile = this.signupForm.value.mobile
+    this.ds.users.email = this.signupForm.value.email
+    this.ds.users.gender = this.signupForm.value.gender
+    this.ds.users.password = this.signupForm.value.createPassword
+    this.ds.users.gender = this.signupForm.value.gender
     this.router.navigateByUrl('/home')
   }
 

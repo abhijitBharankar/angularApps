@@ -1,0 +1,39 @@
+<div class="container">
+    <h3 class="mb-4 mt-3 text-primary text-center">My Profile</h3>
+    
+    <span class="text-success text-center" *ngIf="success">Your profile updated successfully</span>
+    
+    <form [formGroup]="updateForm">
+
+        <label for="fname" class="form-label">First Name
+        </label><br>
+        <input class="form-control" type="text" id="fname" value= "{{user.firstName}}" formControlName = "firstName"><br>
+
+
+        <label for="lname" class="form-label">Last Name
+        </label><br>
+        <input class="form-control" type="text" id="lastName" value="{{user.lastName}}" formControlName = "lastName"><br>
+        
+        <label for="mobile" class="form-label">Mobile
+        </label><br>
+        <input class="form-control" type="text" id="mobile" value="{{user.mobile}}" formControlName = "mobile"><br>
+
+        <label for="email" class="form-label">Email
+        </label><br>
+        <input class="form-control" type="email" id="email" value="{{user.email}}" formControlName = "email"><br>
+
+        
+        <label for="password" class="form-label">Password
+        </label><br>
+        <input class="form-control" type="text" id="password" value="{{user.password}}" formControlName = "password"><br>
+
+        <label for="gender" class="form-label">Gender
+        </label><br>
+        <input type="radio" formControlName = "gender" value="male"> Male
+        <input type="radio" formControlName = "gender" value="female"> Female
+        <input type="radio" formControlName = "gender" value="other"> Other <br>
+        
+        <button class="btn btn-outline-primary text-center mt-3" (click)="update()">Update Profile</button><br>
+
+    </form>
+</div>

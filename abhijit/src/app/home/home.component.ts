@@ -13,7 +13,10 @@ export class HomeComponent {
 
   }
   title ="FalconAB"
-  name = this.ds.name
+  
+  users = this.ds.users
+
+
   show = true
   tableHeadings = ['Name', 'marks', 'Age']
   result = [

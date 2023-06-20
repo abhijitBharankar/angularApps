@@ -3,8 +3,8 @@
 
       <a routerLink="home"><h1>{{title}}</h1></a>
       <div class="loginBtn">
-        <span *ngIf="!name">Welcome, User</span>
-        <span *ngIf="name">Welcome {{name}}</span>
+        <span *ngIf="!users.firstName">Welcome, User</span>
+        <span *ngIf="users.firstName">Welcome {{users.firstName}}</span>
         <button class="btn btn-primary" (click)="login()">Log in</button>
         <button class="btn btn-primary" (click)="signup()">Sign Up</button>
       </div>
@@ -16,12 +16,13 @@
         <li><a routerLink="/contactMe">Contact Me</a></li>
         <li><a routerLink="/newsLetter">Newsletter</a></li>
         <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/profile">Profile</a></li>
       </ul>
     </div>
   </div>
 
   <div *ngIf = show class="directive">
-    <h4>Directives in angular</h4>
+    <h4>Directives in angular</h4> 
 
     <ol>
       <li>Component Directive</li>
