@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
-import { FormGroup, FormBuilder,Validator } from '@angular/forms';
+import { FormGroup, FormBuilder,Validator, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -9,6 +9,8 @@ import { FormGroup, FormBuilder,Validator } from '@angular/forms';
 })
 export class ProfileComponent {
 success!: boolean;
+isDisabled : boolean = false;
+
 constructor(private ds : DataService, private fb: FormBuilder){
 
 }
@@ -29,12 +31,15 @@ update(){
 
 updateFormControl(){
   this.updateForm = this.fb.group({
-    firstName :  [this.ds.users.firstName],
-    lastName : [this.ds.users.lastName],
-    mobile: [this.ds.users.mobile],
-    email : [this.ds.users.email],
-    password: [this.ds.users.password],
-    gender: [this.ds.users.gender]
+    firstName :  [this.ds.users.firstName,[Validators.required]],
+    lastName : [this.ds.users.lastName,[Validators.required]],
+    mobile: new FormControl({value: this.ds.users.mobile,  disabled : true}, Validators.required),
+    email: new FormControl({value: this.ds.users.email , disabled : true}, Validators.required),
+    
+    // mobile: [this.ds.users.mobile],
+    // email : [this.ds.users.email],
+    password: [this.ds.users.password,[Validators.required]],
+    gender: [this.ds.users.gender, [Validators.required]]
   })
 }
 

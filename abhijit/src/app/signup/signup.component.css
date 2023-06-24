@@ -25,3 +25,12 @@ input{
 .error{
     color: red;
 }
+
+.gender-container{
+    display: flex;
+    align-items: center;
+}
+
+.gender-container input{
+    margin: 0 10px;
+}

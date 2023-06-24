@@ -5,3 +5,16 @@ form input{
 button{
     justify-content: center;
 }
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container button{
+    width: 100%;
+}
+
+.error{
+    color: red;
+}

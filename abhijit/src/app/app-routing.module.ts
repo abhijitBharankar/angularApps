@@ -18,7 +18,8 @@ const routes: Routes = [
   {path: 'projects', component: ProjectsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path:'profile',component:ProfileComponent}
+  {path:'profile',component:ProfileComponent},
+  {path:'learn', loadChildren:()=>import('./learn/learn.module').then(mod=>mod.LearnModule)}
 ];
 
 @NgModule({

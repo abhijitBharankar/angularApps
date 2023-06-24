@@ -1,0 +1,8 @@
+<h3>Parent Component</h3>
+
+
+This data sent from child : {{dataFromChild}} <br>
+<label for="">Send Data From Parent to child: </label>
+<input type="text" name="" id="" [(ngModel)] = 'name'><br><br>
+
+<app-child [dataFromParent] = name (dataFromChild)="getData($event)"></app-child>

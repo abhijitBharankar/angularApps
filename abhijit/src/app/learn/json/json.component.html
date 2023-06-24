@@ -1,0 +1,75 @@
+<div class="container">
+    <form action="" [formGroup] = 'resultForm'>
+        <input type="number" class="form-control-sm" formControlName = "rollNumber" placeholder="Enter your roll number" (focus)="gotFocus()">
+        <button class="btn btn-primary mx-2" (click)="viewResult()">View Result</button>
+    </form>
+
+    {{gotName}}
+</div>
+
+<!-- 
+{{result}}
+<div *ngFor="let item of parsedResult">
+    {{item.value.Name}}
+</div> -->
+<!-- {{parsedResult}} -->
+
+
+<div class="result" *ngIf="!show">
+    Name : {{this.getResult.Name}} <br>
+    Roll Number : {{this.getResult.RollNumber}}
+    <table>
+        <thead>
+          <tr>
+            <th>Subjects Code</th>
+            <th>Subjects</th>
+            <th>Marks</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Marathi</td>
+                <td>{{this.getResult.Marathi}}</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Hindi</td>
+                <td>{{this.getResult.Hindi}}</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>English</td>
+                <td>{{this.getResult.English}}</td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>Mathematics</td>
+                <td>{{this.getResult.Maths}}</td>
+            </tr>
+            <tr>
+                <td>72</td>
+                <td>Science & Technology</td>
+                <td>{{this.getResult.Science}}</td>
+            </tr>
+            <tr>
+                <td>73</td>
+                <td>Social Sciences</td>
+                <td>{{this.getResult.Marathi}}</td>
+            </tr>
+    
+            <tr class="bg-success text-light">
+                <td>Percentage</td>
+                <td>{{this.getResult.Percentage}}</td>
+                <td>Total Marks {{this.getResult.totalMarks}}</td>
+            </tr>
+
+            <tr class="bg-success text-light">
+                <td>Result</td>
+                <td>Pass</td>
+                <td>Out of 600</td>
+            </tr>
+            
+        </tbody>
+      </table>
+</div>
