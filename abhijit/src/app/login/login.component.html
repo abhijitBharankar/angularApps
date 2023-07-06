@@ -5,12 +5,17 @@
 
         <form action="" #loginForm='ngForm'>
             <h1>Login</h1>
-            <label for="username">Username: </label>
+            <!-- <label for="username">Username: </label>
             <input type="text" ngModel name="username" #username='ngModel' required pattern="[a-zA-Z]*$" minlength="4"
                 maxlength="16"><br>
             <span class="error" *ngIf="username.errors?.['pattern']">Please enter alphabets only</span>
             <span class="error" *ngIf="username.errors?.['minlength'] && !username.errors?.['pattern']">Length of
-                username must be atleast 4</span><br>
+                username must be atleast 4</span><br> -->
+
+            <label for="email">Email ID: </label>
+            <input type="email" ngModel name="email" #email='ngModel' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
+            <span class="error" *ngIf="email.errors?.['pattern']">Enter valid email id</span><br>
+
             <label for="username">Password: </label>
             <input type="password" ngModel name="password" #password="ngModel" required minlength="6"><br>
             <span class="error" *ngIf="password.errors?.['minlength']">Password must be atleast 6 characters

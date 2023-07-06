@@ -3,10 +3,11 @@
 
       <a routerLink="home"><h1>{{title}}</h1></a>
       <div class="loginBtn">
-        <span *ngIf="!users.firstName">Welcome, User</span>
-        <span *ngIf="users.firstName">Welcome {{users.firstName}}</span>
-        <button class="btn btn-primary" (click)="login()">Log in</button>
-        <button class="btn btn-primary" (click)="signup()">Sign Up</button>
+        <!-- <span *ngIf="!userName">Welcome, User</span> -->
+        <span *ngIf="userName">Welcome {{userName}}</span>
+        <button *ngIf="!userSignedIn" class="btn btn-success" (click)="login()">Log in</button>
+        <button *ngIf="!userSignedIn" class="btn btn-primary" (click)="signup()">Sign Up</button>
+        <button *ngIf="userSignedIn" class="btn btn-danger" (click)="logout()">Log Out</button>
       </div>
     </div>
     <div class="subHead">

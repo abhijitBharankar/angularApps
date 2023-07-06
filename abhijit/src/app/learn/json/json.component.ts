@@ -55,7 +55,7 @@ export class JsonComponent {
     },
     '4':{
       "RollNumber": 4,
-      Name:'Vaibhavi Baban Thombare',
+      Name:'Suraj Gotad',
       Marathi: 87,
       Hindi: 88,
       English: 78,

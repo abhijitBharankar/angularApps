@@ -8,6 +8,7 @@ export class DataService {
   name! :string;
 
   users = {firstName: '', lastName:'',mobile: '',email:'', gender:'', password:''}
+  userName: any;
 
   constructor() { 
   }

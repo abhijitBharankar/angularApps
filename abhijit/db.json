@@ -1,0 +1,140 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server2",
+      "author": "typicode2"
+    },
+    {
+      "id": 3
+    },
+    {
+      "title": "2 states",
+      "author": "Chetan Bhagat",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Rohit",
+      "lastName": "Thombare",
+      "mobile": "8795215522",
+      "email": "rohit@gmail.com",
+      "createPassword": "rohit123",
+      "confirmPassword": "rohit123",
+      "gender": "male",
+      "name": "",
+      "id": 1
+    },
+    {
+      "firstName": "Sumit",
+      "lastName": "Thombare",
+      "mobile": "9876543210",
+      "email": "sumit@gmail.com",
+      "createPassword": "sumit123",
+      "confirmPassword": "sumit123",
+      "gender": "male",
+      "name": "",
+      "id": 2
+    },
+    {
+      "firstName": "Abhiit",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "abhi@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "firstName": "Abhiit",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "abhi@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "firstName": "bacyta",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "abhi@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 7
+    },
+    {
+      "firstName": "navya",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "navya@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 8
+    },
+    {
+      "firstName": "navv",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "nav@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 9
+    },
+    {
+      "firstName": "navvv",
+      "lastName": "Bharankar",
+      "mobile": "9876543210",
+      "email": "navvv@gmail.com",
+      "createPassword": "abhijit",
+      "confirmPassword": "abhijit",
+      "gender": "male",
+      "name": "",
+      "id": 10
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "emails": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "email": "navvv@gmail.com",
+      "id": 3
+    }
+  ]
+}

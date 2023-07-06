@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { ApiCallService } from '../api-call.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,9 +14,15 @@ export class SignupComponent {
 
   signupForm!: FormGroup;
   matchPassword : boolean =true;
+  apiCallResponse: any;
+  
 
+  emailsUrl = "http://localhost:3000/emails"
+  userUrl = "http://localhost:3000/users";
 
-  constructor(private formBuilder: FormBuilder, private ds : DataService, private router: Router) {
+  email = {"email": ""}
+
+  constructor(private formBuilder: FormBuilder, private ds : DataService, private router: Router, private apiCall : ApiCallService, private httpClient : HttpClient) {
 
   }
 
@@ -42,13 +50,34 @@ export class SignupComponent {
   register() {
 
     console.log(this.signupForm.value)
-    this.ds.users.firstName = this.signupForm.value.firstName
-    this.ds.users.lastName = this.signupForm.value.lastName
-    this.ds.users.mobile = this.signupForm.value.mobile
-    this.ds.users.email = this.signupForm.value.email
-    this.ds.users.gender = this.signupForm.value.gender
-    this.ds.users.password = this.signupForm.value.createPassword
-    this.ds.users.gender = this.signupForm.value.gender
+
+    // this.ds.users.firstName = this.signupForm.value.firstName
+    // this.ds.users.lastName = this.signupForm.value.lastName
+    // this.ds.users.mobile = this.signupForm.value.mobile
+    // this.ds.users.email = this.signupForm.value.email
+    // this.ds.users.gender = this.signupForm.value.gender
+    // this.ds.users.password = this.signupForm.value.createPassword
+    // this.ds.users.gender = this.signupForm.value.gender
+
+
+
+    this.apiCall.postApiCall(this.userUrl, this.signupForm.value).subscribe(response=>{
+      this.apiCallResponse = response
+    })
+
+    this.email.email = this.signupForm.value.email
+    this.apiCall.postApiCall(this.emailsUrl, this.email).subscribe(response=>{
+      this.apiCallResponse = response
+    })
+
+    // this.apiCall.getApiCall().subscribe(data=>{
+    //   this.ds.userName = data
+    // })
+
+    // this.httpClient.get(this.userUrl).subscribe(data=>{
+    //   this.ds.userName = data
+    // })
+
     this.router.navigateByUrl('/home')
   }
 

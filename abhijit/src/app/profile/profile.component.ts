@@ -9,7 +9,6 @@ import { FormGroup, FormBuilder,Validator, FormControl, Validators } from '@angu
 })
 export class ProfileComponent {
 success!: boolean;
-isDisabled : boolean = false;
 
 constructor(private ds : DataService, private fb: FormBuilder){
 

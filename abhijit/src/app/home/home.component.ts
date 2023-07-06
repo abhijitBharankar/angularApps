@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
+import { ApiCallService } from '../api-call.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,14 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent {
 
-  constructor(private router: Router , private ds: DataService){
+  constructor(private router: Router , private ds: DataService, private apiCallService : ApiCallService){
 
   }
   title ="FalconAB"
   
+  userName = this.ds.userName
   users = this.ds.users
-
+  userSignedIn = false;
 
   show = true
   tableHeadings = ['Name', 'marks', 'Age']
@@ -42,8 +44,17 @@ export class HomeComponent {
     this.router.navigateByUrl('/signup')
   }
 
+  logout(){
+    
+  }
   
   ngInIt(){
+    this.apiCallService.getApiCall()
+    if(this.userSignedIn){
+
+    }else{
+
+    }
   }
   
   
