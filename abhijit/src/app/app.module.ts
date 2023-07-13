@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from './shared/shared.module';
+import { CharOnlyDirective } from './char-only.directive';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SharedModule } from './shared/shared.module';
     ProjectsComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    CharOnlyDirective
   ],
   imports: [
     BrowserModule,
