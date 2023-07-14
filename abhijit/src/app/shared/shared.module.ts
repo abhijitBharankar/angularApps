@@ -4,11 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LearnComponent } from '../learn/learn/learn.component';
 import { LearnRoutingModule } from '../learn/learn-routing.module';
 import {HttpClientModule} from '@angular/common/http'
+import { NumberOnlyDirective } from '../learn/number-only.directive';
 
 
 @NgModule({
   declarations: [
-    LearnComponent
+    LearnComponent,
+    NumberOnlyDirective
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http'
     ReactiveFormsModule,
     LearnComponent,
     LearnRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NumberOnlyDirective
   ]
 })
 export class SharedModule { }

@@ -16,7 +16,7 @@ export class LoginComponent {
 
   submit(formData:any){
     console.log(formData.email)
-    this.apiCallService.getApiCall().subscribe(res=>{
+    this.apiCallService.getApiCall('emails').subscribe(res=>{
       console.log(Object.keys(res));
       console.log(Object(res).email);
       this.response =  JSON.stringify(res)

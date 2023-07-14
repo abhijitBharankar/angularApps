@@ -1,0 +1,39 @@
+<h1 class="text-center m-4 text-primary">Users data table</h1>
+
+
+<div class="container">
+
+    <form action="">
+        <input type="text" placeholder="Search data" class="form-control mb-2 border-primary" [(ngModel)]="searchText" name="search">
+
+    </form>
+
+    <div *ngIf="users" class="container">
+        <table class="text-center">
+            
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Delete Records</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users | search : searchText">
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.mobile}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.gender}}</td>
+                    <td><button class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+<!-- {{users[1].firstName}} -->

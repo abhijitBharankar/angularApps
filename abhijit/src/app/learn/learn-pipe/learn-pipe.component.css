@@ -1,0 +1,11 @@
+table ,td,th{
+    border: 1px solid blue;
+    padding: 5px;
+    /* text-align: center; */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;;
+}

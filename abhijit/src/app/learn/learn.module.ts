@@ -8,6 +8,8 @@ import { JsonComponent } from './json/json.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from '../shared/shared.module';
+import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { SharedModule } from '../shared/shared.module';
     JsonComponent,
     // LearnComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    LearnPipeComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,

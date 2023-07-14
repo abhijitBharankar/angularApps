@@ -49,12 +49,12 @@ export class HomeComponent {
   }
   
   ngInIt(){
-    this.apiCallService.getApiCall()
-    if(this.userSignedIn){
+    // this.apiCallService.getApiCall()
+    // if(this.userSignedIn){
 
-    }else{
+    // }else{
 
-    }
+    // }
   }
   
   

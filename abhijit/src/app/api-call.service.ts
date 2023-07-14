@@ -7,15 +7,22 @@ import { DataService } from './data.service';
 })
 export class ApiCallService {
 
-  apiUrl = "http://localhost:3000/emails/"
+  apiUrl = "http://localhost:3000/"
   userName :any
+  
+  constructor(private httpClient: HttpClient, private ds :DataService) { }
+
   postApiCall(url: any, value: any) {
     return this.httpClient.post(url, value)
   }
 
-  getApiCall(){
-      return this.httpClient.get(this.apiUrl)
+  getApiCall(endpoint:any){
+    let url = this.apiUrl + endpoint 
+      return this.httpClient.get(url)
   }
 
-  constructor(private httpClient: HttpClient, private ds :DataService) { }
+  delete(endpoint:any){
+    let url = this.apiUrl + endpoint
+    return this.httpClient.delete(url)
+  }
 }

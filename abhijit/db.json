@@ -61,34 +61,6 @@
       "id": 3
     },
     {
-      "id": 4
-    },
-    {
-      "firstName": "Abhiit",
-      "lastName": "Bharankar",
-      "mobile": "9876543210",
-      "email": "abhi@gmail.com",
-      "createPassword": "abhijit",
-      "confirmPassword": "abhijit",
-      "gender": "male",
-      "name": "",
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "firstName": "bacyta",
-      "lastName": "Bharankar",
-      "mobile": "9876543210",
-      "email": "abhi@gmail.com",
-      "createPassword": "abhijit",
-      "confirmPassword": "abhijit",
-      "gender": "male",
-      "name": "",
-      "id": 7
-    },
-    {
       "firstName": "navya",
       "lastName": "Bharankar",
       "mobile": "9876543210",
@@ -98,28 +70,6 @@
       "gender": "male",
       "name": "",
       "id": 8
-    },
-    {
-      "firstName": "navv",
-      "lastName": "Bharankar",
-      "mobile": "9876543210",
-      "email": "nav@gmail.com",
-      "createPassword": "abhijit",
-      "confirmPassword": "abhijit",
-      "gender": "male",
-      "name": "",
-      "id": 9
-    },
-    {
-      "firstName": "navvv",
-      "lastName": "Bharankar",
-      "mobile": "9876543210",
-      "email": "navvv@gmail.com",
-      "createPassword": "abhijit",
-      "confirmPassword": "abhijit",
-      "gender": "male",
-      "name": "",
-      "id": 10
     }
   ],
   "profile": {
