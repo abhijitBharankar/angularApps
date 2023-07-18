@@ -15,7 +15,7 @@ export class SearchPipe implements PipeTransform {
 
     let search = searchText.toLowerCase()
     return tableData.filter((element:any)=>{
-      return JSON.stringify(element).toLowerCase().includes(search)
+      return JSON.stringify(element.firstName).toLowerCase().includes(search)
     })
 
   }

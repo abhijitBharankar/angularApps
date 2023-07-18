@@ -5,7 +5,8 @@ import { LearnComponent } from '../learn/learn/learn.component';
 import { LearnRoutingModule } from '../learn/learn-routing.module';
 import {HttpClientModule} from '@angular/common/http'
 import { NumberOnlyDirective } from '../learn/number-only.directive';
-
+import {MatButtonModule} from '@angular/material/button';
+import{MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { NumberOnlyDirective } from '../learn/number-only.directive';
     FormsModule,
     ReactiveFormsModule,
     LearnRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule
   ],
   
   exports:[
@@ -26,7 +29,10 @@ import { NumberOnlyDirective } from '../learn/number-only.directive';
     LearnComponent,
     LearnRoutingModule,
     HttpClientModule,
-    NumberOnlyDirective
+    NumberOnlyDirective,
+    MatButtonModule,
+    MatIconModule
+
   ]
 })
 export class SharedModule { }

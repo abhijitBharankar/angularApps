@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from './shared/shared.module';
 import { CharOnlyDirective } from './char-only.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CharOnlyDirective } from './char-only.directive';
     AppRoutingModule,
     // FormsModule,
     // ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
