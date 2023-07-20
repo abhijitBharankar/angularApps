@@ -9,6 +9,7 @@ import { DataService } from 'src/app/data.service';
 export class Subject2Component {
 
   name = ""
+  surnameOnSubject2 = "Bharankar"
   constructor(private ds: DataService){
 
   }
@@ -17,5 +18,9 @@ export class Subject2Component {
     this.ds.nameForSubject.subscribe(data=>{
       this.name = data
     })
+  }
+
+  ngOnAfterInit(){
+    
   }
 }
