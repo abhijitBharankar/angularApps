@@ -10,6 +10,9 @@ import { ChildComponent } from './child/child.component';
 import { SharedModule } from '../shared/shared.module';
 import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { SearchPipe } from './search.pipe';
+import { Subject1Component } from './subject1/subject1.component';
+import { Subject2Component } from './subject2/subject2.component';
+import { Subject3Component } from './subject3/subject3.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { SearchPipe } from './search.pipe';
     ParentComponent,
     ChildComponent,
     LearnPipeComponent,
-    SearchPipe
+    SearchPipe,
+    Subject1Component,
+    Subject2Component,
+    Subject3Component
   ],
   imports: [
     CommonModule,
