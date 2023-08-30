@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="card text-center" *ngFor="let item of items">
+        <img src="{{item.url}}" class="card-img-top" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{item.itemName}}</h5>
+            <p class="card-text">₹ {{item.itemPrice}}</p>
+        </div>
+    </div>
+</div>

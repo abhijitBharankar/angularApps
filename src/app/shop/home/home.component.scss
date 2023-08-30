@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    // width: 200px;
+    width: 18rem;
+    margin: 10px; 
+}
+
+.card img{
+    height: 200px;
+}

@@ -1,0 +1,47 @@
+<div class="container text-center my-2">
+    <h1 class="display-4">Deposit</h1>
+
+    <form action="" [formGroup] = depositForm>
+        <table class="table table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>₹</th>
+                    <th>Available Denomination</th>
+                    <th>Denomination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let denomination of availableDenomination | keyvalue">
+                    <td>{{denomination.key}}</td>
+                    <td>{{denomination.value}}</td>
+                    <td><input class="form-control" formControlName= {{denomination.key}} type="number"></td>
+                </tr>
+                
+                <tr class="table-light">
+                    <td><strong>Balance</strong></td>
+                    <td>₹ {{totalAmount}}</td>
+                    <td><button (click)="deposit()" class="btn btn-primary w-100">Deposit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+<hr>
+    <div class="mb-4">
+        <h1 class="display-4">Withdraw Amount</h1>
+        <form action="" [formGroup] = withdrawForm>
+            <div class="row">
+                <div class="col-8">
+                    <input class="form-control" type="text" formControlName="amount">
+                </div>
+                <div class="col">
+                    <button (click)="withdraw()" class="btn btn-success w-100">Withdraw</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div #logs>
+
+    </div>
+</div>
